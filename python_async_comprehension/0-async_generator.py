@@ -5,7 +5,7 @@ import asyncio
 import random
 
 
-async def async_generator():
+async def async_generator() -> AsyncGenerator[float, None, None]:
     "Loop take 10 times and generate a random number"
     for i in range(10):
         await asyncio.sleep(1)
