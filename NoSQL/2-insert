@@ -1,0 +1,3 @@
+//Script that imsert document
+
+db.mongo.insert({"name": "Holberton school"})
