@@ -1,3 +1,4 @@
 //Script that imsert document
 
-db.mongo.insert({"name": "Holberton school"})
+db.createCollection("school")
+db.school.insert({"name": "Holberton school"})
