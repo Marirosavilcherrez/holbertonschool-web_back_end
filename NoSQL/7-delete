@@ -1,3 +1,3 @@
 //Script that delete all documents in the collection
 
-db.school.delete({name: "Holberton school"}, {"multi": "True"})
+db.school.delete({"name": "Holberton school"}, {"multi": "True"})
