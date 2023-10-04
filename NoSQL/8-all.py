@@ -5,6 +5,7 @@ import pymongo
 
 
 def list_all(mongo_collection):
+    "List collection and return a list"
     result = mongo_collection.find({})
     new_list = []
     for document in result:
