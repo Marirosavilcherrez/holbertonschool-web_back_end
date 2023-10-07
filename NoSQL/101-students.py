@@ -18,4 +18,12 @@ def top_students(mongo_collection):
         }
     ]
     new_research = mongo_collection.aggregate(pipeline)
-    return new_research
+    top_students_list = [
+        {
+            'averageScore': student['averageScore'],
+            'student': mongo_collection.find_one({'_id': student['_id']})
+        }
+        for student in top_students_cursor
+    ]
+
+    return top_students_list
