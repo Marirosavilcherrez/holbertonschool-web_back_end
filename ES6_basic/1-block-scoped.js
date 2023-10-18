@@ -1,4 +1,4 @@
-/* Change variable var to const or let */
+/* Change variables for 2 options */
 
 export default function taskBlock() {
   const task = false;
