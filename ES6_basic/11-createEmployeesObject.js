@@ -6,5 +6,5 @@ export default function createEmployeesObject(departmentName, employees) {
       employees,
     },
   };
-  return (departamentObject);
+  return departamentObject;
 }
