@@ -5,7 +5,7 @@ export default function getResponseFromAPI(sucess) {
       if (sucess) {
         resolve('Task completed');
       } else {
-        reject('Task failed');
+        reject(new Error('Task failed'));
       }
     }, 2000); // Simulated 2 seconds;
   });
