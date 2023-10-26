@@ -6,11 +6,11 @@ import uploadPhoto from './5-photo-reject';
 export default function handleProfileSignup(firstName, lastName, fileName) {
   // call the two functions and return promise
   return Promise.all([signUpUser(firstName, lastName), uploadPhoto(fileName)])
-    .then(([firstResult, secondResult])=> {
+    .then(([firstResult, secondResult]) => {
     // configure the arrays
       return [
-        { status: 'fulfilled', value: firstResult }, // fulfilled: completado
-        { status: 'fulfilled', value: secondResult }
+        { status: 'fulfilled',
+	  value: firstResult + secondResult}, // fulfilled: completado
       ];
     })
     .catch((error) => {
