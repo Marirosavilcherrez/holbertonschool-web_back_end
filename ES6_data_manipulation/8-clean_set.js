@@ -5,12 +5,10 @@ export default function cleanSet(inputSet, startString) {
   const filteredValues = [];
   // Iterate through each element in the set
   for (const item of inputSet) {
-  // Check if the item starts with the specified startString
-    if (typeof item === 'string' && startString && item.startsWith(startString) && startString !== '') {
-    // If it does, push the part of the string after startString into the filteredValues array
+    if (typeof item === 'string' && startString && item.startsWith(startString)) {
       filteredValues.push(item.slice(startString.length));
     }
-}
+  }
   // Join the filtered values into a single string separated by '-'
   const resultString = filteredValues.join('-');
   return resultString;
