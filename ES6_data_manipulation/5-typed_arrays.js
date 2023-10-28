@@ -6,7 +6,7 @@ export default function createInt8DataView(length, position, value) {
     throw new Error('Position outside range');
   }
   // Create a new ArrayBuffer with the specified length
-  // ArrayBuffer is a structure of data to contain binary 
+  // ArrayBuffer is a structure of data to contain binary
   const buffer = new ArrayBuffer(length);
   // Create a view of the ArrayBuffer using DataView
   // DataView make it posible to manipulate binary data in a ArrayBuffer
