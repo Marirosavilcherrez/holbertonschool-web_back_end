@@ -6,7 +6,7 @@ export default function cleanSet(inputSet, startString) {
   // Iterate through each element in the set
   for (const item of inputSet) {
   // Check if the item starts with the specified startString
-    if (item.startsWith(startString) && startString !== '') {
+    if (typeof item === 'string' && item.startsWith(startString) && startString !== '') {
     // If it does, push the part of the string after startString into the filteredValues array
       filteredValues.push(item.slice(startString.length));
     }
